@@ -1,7 +1,7 @@
 # 🤖 Smart AI Resume Builder & Analyzer
 
 <p align="center">
-  <img src="images/banner.png" alt="Smart AI Resume Builder & Analyzer" width="100%">
+  <img src="./assets/banner.png" alt="Smart AI Resume Builder & Analyzer" width="100%">
 </p>
 
 <p align="center">
