@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Viewport meta tag added here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <style>
+      @keyframes glitter {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+
+      @keyframes orbit {
+        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+      }
+
+      .glitter-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 28px;
+      }
+
+      .glitter-text {
+        font-size: 2.5rem;
+        font-weight: bold;
+        background: linear-gradient(
+          270deg,
+          #ff4d4d,
+          #f4c242,
+          #42f46e,
+          #4287f4,
+          #d742f4,
+          #f44174
+        );
+        background-size: 400% 400%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glitter 3s ease infinite;
+      }
+
+      .sparkle {
+        position: absolute;
+        font-size: 1.2rem;
+        animation: twinkle 1.5s infinite ease-in-out;
+      }
+
+      .sparkle.orbit {
+        animation: orbit 6s linear infinite, twinkle 1.5s ease-in-out infinite;
+      }
+    </style>
+
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
