@@ -25,6 +25,26 @@ An AI-powered Resume Builder and ATS Resume Analyzer that helps users create pro
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home](assets\home.png)
+
+### 🔐 Login Page
+![Login](assets\Login.png)
+
+### 📄 Resume Builder
+![Resume Builder](assets\Resume_Builder.png)
+
+### 📊 Resume Analyzer
+![Resume Analyzer](assets\Resume_Analyzer.png)
+
+### 🤖 AI Resume Analyzer
+![AI Resume Analyzer](assets\AI_Analyze.png)
+
+### 👨‍💼 Admin Dashboard
+![Admin Dashboard](assets\Database.png)
+
 ## 🛠 Tech Stack
 
 ### Frontend
