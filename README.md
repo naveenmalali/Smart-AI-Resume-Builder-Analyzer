@@ -28,22 +28,22 @@ An AI-powered Resume Builder and ATS Resume Analyzer that helps users create pro
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](assets\home.png)
+![Home](./assets/home.png)
 
 ### 🔐 Login Page
-![Login](assets\Login.png)
+![Login](./assets/login.png)
 
 ### 📄 Resume Builder
-![Resume Builder](assets\Resume_Builder.png)
+![Resume Builder](./assets/resume_builder.png)
 
 ### 📊 Resume Analyzer
-![Resume Analyzer](assets\Resume_Analyzer.png)
+![Resume Analyzer](./assets/resume_analyzer.png)
 
 ### 🤖 AI Resume Analyzer
-![AI Resume Analyzer](assets\AI_Analyze.png)
+![AI Resume Analyzer](./assets/ai_analyze.png)
 
 ### 👨‍💼 Admin Dashboard
-![Admin Dashboard](assets\Database.png)
+![Admin Dashboard](./assets/database.png)
 
 ## 🛠 Tech Stack
 
