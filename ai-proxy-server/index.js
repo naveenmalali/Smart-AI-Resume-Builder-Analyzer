@@ -17,7 +17,7 @@ const promptScoreCache = new Map();
 // Configure CORS
 if (process.env.NODE_ENV === "production") {
   // Configure CORS
-  const allowedOrigins = [
+ const allowedOrigins = [
   "http://localhost:3000",
   "https://smart-ai-resume-builder-analyzer-omega.vercel.app",
   "https://smart-ai-resume-builder-analyzer-fsv4v8qbr-hobby28.vercel.app",
@@ -37,7 +37,6 @@ app.use(
     credentials: true,
   })
 );
-
   
 } else {
   app.use(cors());
