@@ -26,9 +26,13 @@ if (process.env.NODE_ENV === "production") {
 app.use(
   cors({
     origin: (origin, callback) => {
-      console.log(origin);
+      console.log("Origin:", origin);
 
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (
+        !origin ||
+        origin === "http://localhost:3000" ||
+        origin.endsWith(".vercel.app")
+      ) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
