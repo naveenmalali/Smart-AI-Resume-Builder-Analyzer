@@ -17,8 +17,8 @@ const promptScoreCache = new Map();
 // Configure CORS
 if (process.env.NODE_ENV === "production") {
   const allowedOrigins = [
-    "https://your-vercel-app.vercel.app", // Replace with your Vercel URL after deployment
-  ];
+  "https://smart-ai-resume-builder-analyzer-omega.vercel.app",
+];
 
   app.use(
     cors({
