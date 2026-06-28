@@ -16,22 +16,28 @@ const promptScoreCache = new Map();
 
 // Configure CORS
 if (process.env.NODE_ENV === "production") {
-  const allowedOrigins = [
+  // Configure CORS
+const allowedOrigins = [
+  "http://localhost:3000",
   "https://smart-ai-resume-builder-analyzer-omega.vercel.app",
 ];
 
-  app.use(
-    cors({
-      origin(origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          callback(new Error("Not allowed by CORS"));
-        }
-      },
-      credentials: true,
-    })
-  );
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      console.log("Incoming Origin:", origin);
+
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        console.log("Blocked Origin:", origin);
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+  
 } else {
   app.use(cors());
 }
