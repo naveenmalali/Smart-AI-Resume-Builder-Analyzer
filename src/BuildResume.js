@@ -177,23 +177,6 @@ export default function BuildResume() {
   };
 
   // Project Profile Language input handlers
-  const addProjectLanguage = () => {
-    const lang = formData.currentProjectLanguage.trim();
-    if (lang && !formData.currentProjectLanguages.includes(lang)) {
-      setFormData((prev) => ({
-        ...prev,
-        currentProjectLanguages: [...prev.currentProjectLanguages, lang],
-        currentProjectLanguage: "",
-      }));
-    }
-  };
-
-  const removeProjectLanguage = (index) => {
-    setFormData((prev) => ({
-      ...prev,
-      currentProjectLanguages: prev.currentProjectLanguages.filter((_, i) => i !== index),
-    }));
-  };
 
   // Add or Update Project
   const addOrUpdateProject = () => {

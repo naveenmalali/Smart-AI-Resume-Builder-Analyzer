@@ -96,7 +96,7 @@ export default function Analyze() {
     }
   };
 
-  const analyzeTextContent = (text) => {
+  const analyzeTextContent = React.useCallback((text) => {
     if (!text) {
       setScore(0);
       setReport('Resume text unavailable.');
@@ -111,8 +111,6 @@ export default function Analyze() {
     ];
 
     const foundSections = requiredSections.filter((s) => normalizedText.includes(s));
-    const missingSections = requiredSections.filter((s) => !normalizedText.includes(s));
-
     const lengthScore = Math.min(text.length / 1000, 1) * 40;
     const sectionScore = (foundSections.length / requiredSections.length) * 30;
     const alignmentScore = 15;
@@ -138,7 +136,7 @@ export default function Analyze() {
     );
 
     handleShowExplosion(totalScore);
-  };
+  }, [grammarErrors]);
 
   const onDrop = useCallback(
     async (acceptedFiles) => {
@@ -219,7 +217,7 @@ export default function Analyze() {
         console.error(err);
       }
     },
-    [selectedBranch, selectedRole]
+    [selectedBranch, selectedRole, analyzeTextContent]
   );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({

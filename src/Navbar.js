@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const navStyle = {
   backgroundColor: '#90ee90',
   display: 'flex',
-  justifyContent: 'center', // Keep center alignment for nav items
+  justifyContent: 'center',
   alignItems: 'center',
   padding: '8px 0',
   position: 'sticky',
@@ -13,7 +13,6 @@ const navStyle = {
   zIndex: 1000,
   boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
   minHeight: 45,
-  position: 'relative', // for absolute children like hamburger on small
 };
 
 const baseLinkStyle = {
