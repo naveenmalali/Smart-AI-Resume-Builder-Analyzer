@@ -156,11 +156,14 @@ export default function AiAnalyze() {
     indexRef.current = 0;
     clearTimeout(timeoutRef.current);
     try {
-      const res = await axios.post("http://localhost:5000/api/analyze-resume", {
-        text: textContent,
-        branch,
-        role,
-      });
+        const res = await axios.post(
+        "https://resume-ai-backend-i7fa.onrender.com/api/analyze-resume",
+        {
+          text: textContent,
+          branch,
+          role,
+        }
+      );
       setFullAnalysis(res.data.analysis || "");
       setDisplayedAnalysis("");
     } catch (err) {
